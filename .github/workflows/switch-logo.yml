@@ -18,11 +18,11 @@ jobs:
           TODAY=$(date +'%m-%d')
           if [ "$TODAY" == "05-31" ]; then
             # Switch to pride logo.
-            sed --in-place 's|/images/nix-logo\.png|/images/nix-logo-pride.png|g' frontend/src/Main.elm
+            sed --in-place 's|/images/nix-logo\.svg|/images/nix-logo-pride.svg|g' frontend/src/Main.elm
             git_commit_message="chore(logo): use pride logo"
           elif [ "$TODAY" == "07-01" ]; then
             # Switch back to normal logo.
-            sed --in-place 's|/images/nix-logo-pride\.png|/images/nix-logo.png|g' frontend/src/Main.elm
+            sed --in-place 's|/images/nix-logo-pride\.svg|/images/nix-logo.svg|g' frontend/src/Main.elm
             git_commit_message="chore(logo): switch back to normal logo"
           else
             echo "No action needed for logo today."
